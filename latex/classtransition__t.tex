@@ -1,0 +1,130 @@
+\hypertarget{classtransition__t}{}\section{Referencia de la Clase transition\+\_\+t}
+\label{classtransition__t}\index{transition\+\_\+t@{transition\+\_\+t}}
+
+
+Representa una transición de la máquina.  
+
+
+
+
+{\ttfamily \#include $<$transition\+\_\+t.\+hpp$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtransition__t_aa62ed346511c02704d794d05ff1a77ad}{}\hyperlink{classtransition__t_aa62ed346511c02704d794d05ff1a77ad}{transition\+\_\+t} (\hyperlink{classstate}{state} \&src, \hyperlink{classstate}{state} \&dest, char read, char write, char mv)\label{classtransition__t_aa62ed346511c02704d794d05ff1a77ad}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classstate}{state} $\ast$ \hyperlink{classtransition__t_aac5048fbc4307cc982437e393cf97c89}{get\+\_\+src} () const 
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classstate}{state} $\ast$ \hyperlink{classtransition__t_a91eb01ea36496fd40b84f5f68b598ca6}{get\+\_\+dest} () const 
+\begin{DoxyCompactList}\small\item\em Devuelve el estado final. \end{DoxyCompactList}\item 
+char \hyperlink{classtransition__t_ab3292c1a0ac802734292ec8d7693cb1f}{get\+\_\+read\+\_\+symbol} () const 
+\begin{DoxyCompactList}\small\item\em Devuelve el símbolo necesario para la transición. \end{DoxyCompactList}\item 
+char \hyperlink{classtransition__t_a5ed16ea20f144264552513af0fddae72}{get\+\_\+write\+\_\+symbol} () const 
+\begin{DoxyCompactList}\small\item\em Devuelve el símbolo a escribir. \end{DoxyCompactList}\item 
+char \hyperlink{classtransition__t_af4625e65d423858e98d4c55f6beb60c9}{get\+\_\+movement} () const 
+\begin{DoxyCompactList}\small\item\em Devuelve el movimiento. \end{DoxyCompactList}\item 
+\hypertarget{classtransition__t_ab8a2cd43901028a58d08f33169382fc5}{}bool {\bfseries operator$<$} (const \hyperlink{classtransition__t}{transition\+\_\+t} \&) const \label{classtransition__t_ab8a2cd43901028a58d08f33169382fc5}
+
+\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtransition__t_a7dd43b71a5592511682d1055bacc4e30}{}\hyperlink{classstate}{state} $\ast$ \hyperlink{classtransition__t_a7dd43b71a5592511682d1055bacc4e30}{src\+\_\+}\label{classtransition__t_a7dd43b71a5592511682d1055bacc4e30}
+
+\begin{DoxyCompactList}\small\item\em Estado inicial. \end{DoxyCompactList}\item 
+\hypertarget{classtransition__t_aa8b498692df1561ff2ca6a8146438a6b}{}\hyperlink{classstate}{state} $\ast$ \hyperlink{classtransition__t_aa8b498692df1561ff2ca6a8146438a6b}{dest\+\_\+}\label{classtransition__t_aa8b498692df1561ff2ca6a8146438a6b}
+
+\begin{DoxyCompactList}\small\item\em Estado al que se transita. \end{DoxyCompactList}\item 
+\hypertarget{classtransition__t_ad5e12d9b149fda53f00fce60ae649b98}{}char \hyperlink{classtransition__t_ad5e12d9b149fda53f00fce60ae649b98}{read\+\_\+symbol\+\_\+}\label{classtransition__t_ad5e12d9b149fda53f00fce60ae649b98}
+
+\begin{DoxyCompactList}\small\item\em Símbolo leído. \end{DoxyCompactList}\item 
+\hypertarget{classtransition__t_a489c4e2507e36c7abe5d86a2abbbb4ec}{}char \hyperlink{classtransition__t_a489c4e2507e36c7abe5d86a2abbbb4ec}{write\+\_\+symbol\+\_\+}\label{classtransition__t_a489c4e2507e36c7abe5d86a2abbbb4ec}
+
+\begin{DoxyCompactList}\small\item\em Símbolo a escribir. \end{DoxyCompactList}\item 
+\hypertarget{classtransition__t_a7cb8be177964aa626e444022305adf79}{}char \hyperlink{classtransition__t_a7cb8be177964aa626e444022305adf79}{mv\+\_\+}\label{classtransition__t_a7cb8be177964aa626e444022305adf79}
+
+\begin{DoxyCompactList}\small\item\em Movimiento a realizar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa una transición de la máquina. 
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{classtransition__t_a91eb01ea36496fd40b84f5f68b598ca6}{}\index{transition\+\_\+t@{transition\+\_\+t}!get\+\_\+dest@{get\+\_\+dest}}
+\index{get\+\_\+dest@{get\+\_\+dest}!transition\+\_\+t@{transition\+\_\+t}}
+\subsubsection[{get\+\_\+dest() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf state}$\ast$ transition\+\_\+t\+::get\+\_\+dest (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtransition__t_a91eb01ea36496fd40b84f5f68b598ca6}
+
+
+Devuelve el estado final. 
+
+\begin{DoxyReturn}{Devuelve}
+Puntero al estado final 
+\end{DoxyReturn}
+\hypertarget{classtransition__t_af4625e65d423858e98d4c55f6beb60c9}{}\index{transition\+\_\+t@{transition\+\_\+t}!get\+\_\+movement@{get\+\_\+movement}}
+\index{get\+\_\+movement@{get\+\_\+movement}!transition\+\_\+t@{transition\+\_\+t}}
+\subsubsection[{get\+\_\+movement() const }]{\setlength{\rightskip}{0pt plus 5cm}char transition\+\_\+t\+::get\+\_\+movement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtransition__t_af4625e65d423858e98d4c55f6beb60c9}
+
+
+Devuelve el movimiento. 
+
+\begin{DoxyReturn}{Devuelve}
+Movimiento a realizar 
+\end{DoxyReturn}
+\hypertarget{classtransition__t_ab3292c1a0ac802734292ec8d7693cb1f}{}\index{transition\+\_\+t@{transition\+\_\+t}!get\+\_\+read\+\_\+symbol@{get\+\_\+read\+\_\+symbol}}
+\index{get\+\_\+read\+\_\+symbol@{get\+\_\+read\+\_\+symbol}!transition\+\_\+t@{transition\+\_\+t}}
+\subsubsection[{get\+\_\+read\+\_\+symbol() const }]{\setlength{\rightskip}{0pt plus 5cm}char transition\+\_\+t\+::get\+\_\+read\+\_\+symbol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtransition__t_ab3292c1a0ac802734292ec8d7693cb1f}
+
+
+Devuelve el símbolo necesario para la transición. 
+
+\begin{DoxyReturn}{Devuelve}
+Símbolo para realizar la transición 
+\end{DoxyReturn}
+\hypertarget{classtransition__t_aac5048fbc4307cc982437e393cf97c89}{}\index{transition\+\_\+t@{transition\+\_\+t}!get\+\_\+src@{get\+\_\+src}}
+\index{get\+\_\+src@{get\+\_\+src}!transition\+\_\+t@{transition\+\_\+t}}
+\subsubsection[{get\+\_\+src() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf state}$\ast$ transition\+\_\+t\+::get\+\_\+src (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtransition__t_aac5048fbc4307cc982437e393cf97c89}
+
+
+Destructor. 
+
+Devuelve el estado inicial \begin{DoxyReturn}{Devuelve}
+Puntero al estado inicial 
+\end{DoxyReturn}
+\hypertarget{classtransition__t_a5ed16ea20f144264552513af0fddae72}{}\index{transition\+\_\+t@{transition\+\_\+t}!get\+\_\+write\+\_\+symbol@{get\+\_\+write\+\_\+symbol}}
+\index{get\+\_\+write\+\_\+symbol@{get\+\_\+write\+\_\+symbol}!transition\+\_\+t@{transition\+\_\+t}}
+\subsubsection[{get\+\_\+write\+\_\+symbol() const }]{\setlength{\rightskip}{0pt plus 5cm}char transition\+\_\+t\+::get\+\_\+write\+\_\+symbol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtransition__t_a5ed16ea20f144264552513af0fddae72}
+
+
+Devuelve el símbolo a escribir. 
+
+\begin{DoxyReturn}{Devuelve}
+Símbolo a escribir 
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+transition\+\_\+t.\+hpp\item 
+transition\+\_\+t.\+cpp\end{DoxyCompactItemize}

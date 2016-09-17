@@ -1,0 +1,80 @@
+\hypertarget{classdelta}{}\section{Referencia de la Clase delta}
+\label{classdelta}\index{delta@{delta}}
+
+
+Representa la función de transición.  
+
+
+
+
+{\ttfamily \#include $<$delta.\+hpp$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdelta_a435f658a4e7efcf415b8b5c0c719ebc2}{}\hyperlink{classdelta_a435f658a4e7efcf415b8b5c0c719ebc2}{delta} ()\label{classdelta_a435f658a4e7efcf415b8b5c0c719ebc2}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classdelta_ae8501f76d2bd17cce5a65b89b82a6ed0}{}\hyperlink{classdelta_ae8501f76d2bd17cce5a65b89b82a6ed0}{$\sim$delta} ()\label{classdelta_ae8501f76d2bd17cce5a65b89b82a6ed0}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+const \hyperlink{classtransition__t}{transition\+\_\+t} $\ast$ \hyperlink{classdelta_acc97ce2edf223c7d487154de2960a798}{get\+\_\+transition} (const \hyperlink{classstate}{state} \&, char)
+\begin{DoxyCompactList}\small\item\em Obtiene una transicion. \end{DoxyCompactList}\item 
+void \hyperlink{classdelta_afd3d79eb267b4bff4e73c96a2f0efe78}{put\+\_\+transition} (\hyperlink{classtransition__t}{transition\+\_\+t} trans)
+\begin{DoxyCompactList}\small\item\em Añade una transición. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classdelta_a165fe7de35ac60c3075ccb0f2a5a1569}{}set$<$ \hyperlink{classtransition__t}{transition\+\_\+t} $>$ \hyperlink{classdelta_a165fe7de35ac60c3075ccb0f2a5a1569}{E\+\_\+}\label{classdelta_a165fe7de35ac60c3075ccb0f2a5a1569}
+
+\begin{DoxyCompactList}\small\item\em Conjunto de transiciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa la función de transición. 
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{classdelta_acc97ce2edf223c7d487154de2960a798}{}\index{delta@{delta}!get\+\_\+transition@{get\+\_\+transition}}
+\index{get\+\_\+transition@{get\+\_\+transition}!delta@{delta}}
+\subsubsection[{get\+\_\+transition(const state \&, char)}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf transition\+\_\+t} $\ast$ delta\+::get\+\_\+transition (
+\begin{DoxyParamCaption}
+\item[{const {\bf state} \&}]{Q, }
+\item[{char}]{read}
+\end{DoxyParamCaption}
+)}\label{classdelta_acc97ce2edf223c7d487154de2960a798}
+
+
+Obtiene una transicion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Q} & Estado actual \\
+\hline
+{\em s} & Símbolo de entrada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Estado siguiente 
+\end{DoxyReturn}
+\hypertarget{classdelta_afd3d79eb267b4bff4e73c96a2f0efe78}{}\index{delta@{delta}!put\+\_\+transition@{put\+\_\+transition}}
+\index{put\+\_\+transition@{put\+\_\+transition}!delta@{delta}}
+\subsubsection[{put\+\_\+transition(transition\+\_\+t trans)}]{\setlength{\rightskip}{0pt plus 5cm}void delta\+::put\+\_\+transition (
+\begin{DoxyParamCaption}
+\item[{{\bf transition\+\_\+t}}]{trans}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classdelta_afd3d79eb267b4bff4e73c96a2f0efe78}
+
+
+Añade una transición. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em trans} & transición \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+delta.\+hpp\item 
+delta.\+cpp\end{DoxyCompactItemize}

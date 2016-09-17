@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>Práctica 8: Fichero Fuente turing.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica 8
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">turing.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;infinite_tape.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;state.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;transition_t.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;delta.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define LOOP_TOLERANCE 100 </span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classturing__machine.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classturing__machine.html">turing_machine</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classturing__machine.html#ab7a9f97044a007cb9ef4cce27765fb7c">   20</a></span>&#160;        ifstream* <a class="code" href="classturing__machine.html#ab7a9f97044a007cb9ef4cce27765fb7c">file_</a>;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classturing__machine.html#a1cc1f803b9e21b048e55d11f07d831a3">   22</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classturing__machine.html#a1cc1f803b9e21b048e55d11f07d831a3">S_</a>; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classturing__machine.html#a2092ae5d57486dc9258de17367311bc1">   23</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classturing__machine.html#a2092ae5d57486dc9258de17367311bc1">n_states_</a>;  </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classturing__machine.html#aeeb3d8b47e0ff204790cbf77821285c9">   24</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classturing__machine.html#aeeb3d8b47e0ff204790cbf77821285c9">accept_</a>;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classturing__machine.html#a24a11a7bb910aeb659fc296d71dc6b66">   25</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classturing__machine.html#a24a11a7bb910aeb659fc296d71dc6b66">n_t_</a>;   </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classturing__machine.html#a44915543f4eb338007d79a0cc4eefe01">   26</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classturing__machine.html#a44915543f4eb338007d79a0cc4eefe01">loop_counter_</a>;  </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classturing__machine.html#af317bfb8bbafd64728ad1d0810ab8bda">   28</a></span>&#160;        <a class="code" href="classinfinite__tape.html">infinite_tape</a>* <a class="code" href="classturing__machine.html#af317bfb8bbafd64728ad1d0810ab8bda">T_</a>;  </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classturing__machine.html#a15e84a3fa93b3bc68d243a1e4d2c3d9b">   29</a></span>&#160;        <a class="code" href="classdelta.html">delta</a> <a class="code" href="classturing__machine.html#a15e84a3fa93b3bc68d243a1e4d2c3d9b">D_</a>;   </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classturing__machine.html#a27484c782baa3661e2363e5f4c2e3525">   30</a></span>&#160;        set&lt;state&gt; <a class="code" href="classturing__machine.html#a27484c782baa3661e2363e5f4c2e3525">Q_</a>;  </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classturing__machine.html">turing_machine</a>(ifstream*);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        ~<a class="code" href="classturing__machine.html">turing_machine</a>();  </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> put_string();  </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> put_string(<span class="keywordtype">char</span>*);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">bool</span> run(); </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> show_tape();   </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> clear_tape();  </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> print_file();  </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">void</span> print();   </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="ttc" id="classturing__machine_html"><div class="ttname"><a href="classturing__machine.html">turing_machine</a></div><div class="ttdoc">Representa una máquina de Turing. </div><div class="ttdef"><b>Definition:</b> turing.hpp:18</div></div>
+<div class="ttc" id="classturing__machine_html_af317bfb8bbafd64728ad1d0810ab8bda"><div class="ttname"><a href="classturing__machine.html#af317bfb8bbafd64728ad1d0810ab8bda">turing_machine::T_</a></div><div class="ttdeci">infinite_tape * T_</div><div class="ttdoc">Cinta. </div><div class="ttdef"><b>Definition:</b> turing.hpp:28</div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="classturing__machine_html_aeeb3d8b47e0ff204790cbf77821285c9"><div class="ttname"><a href="classturing__machine.html#aeeb3d8b47e0ff204790cbf77821285c9">turing_machine::accept_</a></div><div class="ttdeci">int accept_</div><div class="ttdoc">Límite de estado de aceptación. </div><div class="ttdef"><b>Definition:</b> turing.hpp:24</div></div>
+<div class="ttc" id="classdelta_html"><div class="ttname"><a href="classdelta.html">delta</a></div><div class="ttdoc">Representa la función de transición. </div><div class="ttdef"><b>Definition:</b> delta.hpp:14</div></div>
+<div class="ttc" id="classinfinite__tape_html"><div class="ttname"><a href="classinfinite__tape.html">infinite_tape</a></div><div class="ttdoc">Cinta infinita sobre la que escribe la máquina. </div><div class="ttdef"><b>Definition:</b> infinite_tape.hpp:19</div></div>
+<div class="ttc" id="classturing__machine_html_ab7a9f97044a007cb9ef4cce27765fb7c"><div class="ttname"><a href="classturing__machine.html#ab7a9f97044a007cb9ef4cce27765fb7c">turing_machine::file_</a></div><div class="ttdeci">ifstream * file_</div><div class="ttdoc">Fichero de entrada. </div><div class="ttdef"><b>Definition:</b> turing.hpp:20</div></div>
+<div class="ttc" id="classturing__machine_html_a27484c782baa3661e2363e5f4c2e3525"><div class="ttname"><a href="classturing__machine.html#a27484c782baa3661e2363e5f4c2e3525">turing_machine::Q_</a></div><div class="ttdeci">set&lt; state &gt; Q_</div><div class="ttdoc">Conjunto de estados. </div><div class="ttdef"><b>Definition:</b> turing.hpp:30</div></div>
+<div class="ttc" id="classturing__machine_html_a24a11a7bb910aeb659fc296d71dc6b66"><div class="ttname"><a href="classturing__machine.html#a24a11a7bb910aeb659fc296d71dc6b66">turing_machine::n_t_</a></div><div class="ttdeci">int n_t_</div><div class="ttdoc">Número de transiciones. </div><div class="ttdef"><b>Definition:</b> turing.hpp:25</div></div>
+<div class="ttc" id="classturing__machine_html_a44915543f4eb338007d79a0cc4eefe01"><div class="ttname"><a href="classturing__machine.html#a44915543f4eb338007d79a0cc4eefe01">turing_machine::loop_counter_</a></div><div class="ttdeci">int loop_counter_</div><div class="ttdoc">Contador para controlar bucles. </div><div class="ttdef"><b>Definition:</b> turing.hpp:26</div></div>
+<div class="ttc" id="classturing__machine_html_a2092ae5d57486dc9258de17367311bc1"><div class="ttname"><a href="classturing__machine.html#a2092ae5d57486dc9258de17367311bc1">turing_machine::n_states_</a></div><div class="ttdeci">int n_states_</div><div class="ttdoc">Número de estados. </div><div class="ttdef"><b>Definition:</b> turing.hpp:23</div></div>
+<div class="ttc" id="classturing__machine_html_a15e84a3fa93b3bc68d243a1e4d2c3d9b"><div class="ttname"><a href="classturing__machine.html#a15e84a3fa93b3bc68d243a1e4d2c3d9b">turing_machine::D_</a></div><div class="ttdeci">delta D_</div><div class="ttdoc">Función de transición. </div><div class="ttdef"><b>Definition:</b> turing.hpp:29</div></div>
+<div class="ttc" id="classturing__machine_html_a1cc1f803b9e21b048e55d11f07d831a3"><div class="ttname"><a href="classturing__machine.html#a1cc1f803b9e21b048e55d11f07d831a3">turing_machine::S_</a></div><div class="ttdeci">int S_</div><div class="ttdoc">Estado de arranque. </div><div class="ttdef"><b>Definition:</b> turing.hpp:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

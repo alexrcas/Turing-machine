@@ -1,0 +1,116 @@
+\hypertarget{classturing__machine}{}\section{Referencia de la Clase turing\+\_\+machine}
+\label{classturing__machine}\index{turing\+\_\+machine@{turing\+\_\+machine}}
+
+
+Representa una máquina de Turing.  
+
+
+
+
+{\ttfamily \#include $<$turing.\+hpp$>$}
+
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classturing__machine_aa95ccff3ecd07d3cee3a50d1af545ee5}{turing\+\_\+machine} (ifstream $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a66c386d2beb4d11e4a9097924f9094c7}{}\hyperlink{classturing__machine_a66c386d2beb4d11e4a9097924f9094c7}{$\sim$turing\+\_\+machine} ()\label{classturing__machine_a66c386d2beb4d11e4a9097924f9094c7}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a3d200dac6d24ad9a9340c4b594110238}{}void \hyperlink{classturing__machine_a3d200dac6d24ad9a9340c4b594110238}{put\+\_\+string} ()\label{classturing__machine_a3d200dac6d24ad9a9340c4b594110238}
+
+\begin{DoxyCompactList}\small\item\em Escribe en la cinta. \end{DoxyCompactList}\item 
+void \hyperlink{classturing__machine_a18a86be2df1ff27eae1d26c130334699}{put\+\_\+string} (char $\ast$)
+\begin{DoxyCompactList}\small\item\em Escribe en la cinta. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a9d3b88cd878c42da30102045c36c0d17}{}bool \hyperlink{classturing__machine_a9d3b88cd878c42da30102045c36c0d17}{run} ()\label{classturing__machine_a9d3b88cd878c42da30102045c36c0d17}
+
+\begin{DoxyCompactList}\small\item\em Inicia la simulación. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a49120fa02f2272261c936e94ad21cefb}{}void \hyperlink{classturing__machine_a49120fa02f2272261c936e94ad21cefb}{show\+\_\+tape} ()\label{classturing__machine_a49120fa02f2272261c936e94ad21cefb}
+
+\begin{DoxyCompactList}\small\item\em Muestra la cinta. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a16222a07eb1695203391a3795cb68f29}{}void \hyperlink{classturing__machine_a16222a07eb1695203391a3795cb68f29}{clear\+\_\+tape} ()\label{classturing__machine_a16222a07eb1695203391a3795cb68f29}
+
+\begin{DoxyCompactList}\small\item\em Limpia la cinta. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a615c7d25a8f95a84000958d5466e8c8a}{}void \hyperlink{classturing__machine_a615c7d25a8f95a84000958d5466e8c8a}{print\+\_\+file} ()\label{classturing__machine_a615c7d25a8f95a84000958d5466e8c8a}
+
+\begin{DoxyCompactList}\small\item\em Muestra el fichero. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_ab7a04417388f50c1c08c36b4ab0f6208}{}void \hyperlink{classturing__machine_ab7a04417388f50c1c08c36b4ab0f6208}{print} ()\label{classturing__machine_ab7a04417388f50c1c08c36b4ab0f6208}
+
+\begin{DoxyCompactList}\small\item\em Muestra la máquina de forma legible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classturing__machine_ab7a9f97044a007cb9ef4cce27765fb7c}{}ifstream $\ast$ \hyperlink{classturing__machine_ab7a9f97044a007cb9ef4cce27765fb7c}{file\+\_\+}\label{classturing__machine_ab7a9f97044a007cb9ef4cce27765fb7c}
+
+\begin{DoxyCompactList}\small\item\em Fichero de entrada. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a1cc1f803b9e21b048e55d11f07d831a3}{}int \hyperlink{classturing__machine_a1cc1f803b9e21b048e55d11f07d831a3}{S\+\_\+}\label{classturing__machine_a1cc1f803b9e21b048e55d11f07d831a3}
+
+\begin{DoxyCompactList}\small\item\em Estado de arranque. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a2092ae5d57486dc9258de17367311bc1}{}int \hyperlink{classturing__machine_a2092ae5d57486dc9258de17367311bc1}{n\+\_\+states\+\_\+}\label{classturing__machine_a2092ae5d57486dc9258de17367311bc1}
+
+\begin{DoxyCompactList}\small\item\em Número de estados. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_aeeb3d8b47e0ff204790cbf77821285c9}{}int \hyperlink{classturing__machine_aeeb3d8b47e0ff204790cbf77821285c9}{accept\+\_\+}\label{classturing__machine_aeeb3d8b47e0ff204790cbf77821285c9}
+
+\begin{DoxyCompactList}\small\item\em Límite de estado de aceptación. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a24a11a7bb910aeb659fc296d71dc6b66}{}int \hyperlink{classturing__machine_a24a11a7bb910aeb659fc296d71dc6b66}{n\+\_\+t\+\_\+}\label{classturing__machine_a24a11a7bb910aeb659fc296d71dc6b66}
+
+\begin{DoxyCompactList}\small\item\em Número de transiciones. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a44915543f4eb338007d79a0cc4eefe01}{}int \hyperlink{classturing__machine_a44915543f4eb338007d79a0cc4eefe01}{loop\+\_\+counter\+\_\+}\label{classturing__machine_a44915543f4eb338007d79a0cc4eefe01}
+
+\begin{DoxyCompactList}\small\item\em Contador para controlar bucles. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_af317bfb8bbafd64728ad1d0810ab8bda}{}\hyperlink{classinfinite__tape}{infinite\+\_\+tape} $\ast$ \hyperlink{classturing__machine_af317bfb8bbafd64728ad1d0810ab8bda}{T\+\_\+}\label{classturing__machine_af317bfb8bbafd64728ad1d0810ab8bda}
+
+\begin{DoxyCompactList}\small\item\em Cinta. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a15e84a3fa93b3bc68d243a1e4d2c3d9b}{}\hyperlink{classdelta}{delta} \hyperlink{classturing__machine_a15e84a3fa93b3bc68d243a1e4d2c3d9b}{D\+\_\+}\label{classturing__machine_a15e84a3fa93b3bc68d243a1e4d2c3d9b}
+
+\begin{DoxyCompactList}\small\item\em Función de transición. \end{DoxyCompactList}\item 
+\hypertarget{classturing__machine_a27484c782baa3661e2363e5f4c2e3525}{}set$<$ \hyperlink{classstate}{state} $>$ \hyperlink{classturing__machine_a27484c782baa3661e2363e5f4c2e3525}{Q\+\_\+}\label{classturing__machine_a27484c782baa3661e2363e5f4c2e3525}
+
+\begin{DoxyCompactList}\small\item\em Conjunto de estados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Representa una máquina de Turing. 
+
+\subsection{Documentación del constructor y destructor}
+\hypertarget{classturing__machine_aa95ccff3ecd07d3cee3a50d1af545ee5}{}\index{turing\+\_\+machine@{turing\+\_\+machine}!turing\+\_\+machine@{turing\+\_\+machine}}
+\index{turing\+\_\+machine@{turing\+\_\+machine}!turing\+\_\+machine@{turing\+\_\+machine}}
+\subsubsection[{turing\+\_\+machine(ifstream $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}turing\+\_\+machine\+::turing\+\_\+machine (
+\begin{DoxyParamCaption}
+\item[{ifstream $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{classturing__machine_aa95ccff3ecd07d3cee3a50d1af545ee5}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em file} & Fichero de entrada \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentación de las funciones miembro}
+\hypertarget{classturing__machine_a18a86be2df1ff27eae1d26c130334699}{}\index{turing\+\_\+machine@{turing\+\_\+machine}!put\+\_\+string@{put\+\_\+string}}
+\index{put\+\_\+string@{put\+\_\+string}!turing\+\_\+machine@{turing\+\_\+machine}}
+\subsubsection[{put\+\_\+string(char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void turing\+\_\+machine\+::put\+\_\+string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{classturing__machine_a18a86be2df1ff27eae1d26c130334699}
+
+
+Escribe en la cinta. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em str} & Cadena a escribir en la cinta \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+turing.\+hpp\item 
+turing.\+cpp\end{DoxyCompactItemize}
